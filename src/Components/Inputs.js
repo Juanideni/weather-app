@@ -17,10 +17,10 @@ function Inputs(props){
                 Enter city name:
                 </Form.Label>
                 <Col sm="10">
-                <Form.Control type="text" placeholder="Normal text" onInput={getName}/>
+                <Form.Control type="text" placeholder="Normal text" onInput={getName} onChange = {() => props.sendName(cityName)}/>
                 </Col>
             </Form.Group>
-            <Button variant="outline-success" onClick={() => props.sendName(cityName)}>Success</Button>
+    
             </Form>
         
         </>

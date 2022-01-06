@@ -1,8 +1,9 @@
 import {useState, useEffect} from "react"
 
 function WeatherInfo(props){
-    const [weather, setWeather] = useState([])
-
+    const [weatherInfo, setWeatherInfo] = useState([])
+    const urlImgBase = 'www.metaweather.com/static/'
+   
     useEffect(()=>{
         if(props.id !== 0){
             const fetchData = async () => {
@@ -10,23 +11,28 @@ function WeatherInfo(props){
                 .then(res => res.json())
                 .then(
                     (json) => {
-                        setWeather(json.consolidated_weather)
+                        setWeatherInfo(json.consolidated_weather)
                     }
                     )
                 }
                 fetchData()
         }
+        else {
+            return("")
+        }
     })
 
+    const imgUrlBase = 'https://www.metaweather.com/static/';
    
 
     return(
         <>
         <ul>
         {
-            weather.map(clima => (
+            weatherInfo.map(clima => (
                 <>
                 <li key="clima.id">
+                <img className="mb-2" width="30" src={`${imgUrlBase}img/weather/${clima.weather_state_abbr}.svg`} alt="" /><br></br>
                     - Day: {clima.applicable_date} <br></br>
                     - State of the day: {clima.weather_state_name} <br></br>
                     - Min Temp: {clima.min_temp} <br></br>
