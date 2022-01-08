@@ -22,7 +22,7 @@ function App(props) {
     <>
     <Inputs sendName = {sendName}/>
     <City name = {city} sendId={sendId}/>
-    <WeatherInfo id = {idCity}/>
+    <WeatherInfo id = {idCity} name={city}/>
 
     </>
   );

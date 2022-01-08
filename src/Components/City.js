@@ -10,6 +10,7 @@ function City(props){
 
 
     useEffect(()=> {
+       
             fetch(`https://the-ultimate-api-challenge.herokuapp.com/www.metaweather.com/api/location/search/?query=${props.name}`)
             .then(res => res.json())
             .then(
@@ -17,16 +18,11 @@ function City(props){
                     setCity(res)
                     
                 }
-            )  
+                )  
         })
-    
-  
-
         
 
-   
-
-    return(
+  return(
         <>
            <ul>
               {
@@ -35,17 +31,16 @@ function City(props){
            
                       <li key="cities.id">
                           <>
+                          <br></br>
                             <Form>
                             <Form.Group className="mb-3">
-                                <Form.Label column sm="2">
-                                    {cities.title}<br></br>
-                                </Form.Label>
-                                </Form.Group>
+                            <Form.Label onChange={props.sendId(cities.woeid)}></Form.Label>
+                            </Form.Group>
                             </Form>
                         
                           </>
                       </li>
-                      <button onClick={() => props.sendId(cities.woeid)}>Get weather</button>
+                      
                       </>
                       )) 
                   }
@@ -56,4 +51,4 @@ function City(props){
     )
 }
 export default City;
-//{() => props.sendId(cityId)}
+
