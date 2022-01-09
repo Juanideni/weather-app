@@ -2,4 +2,23 @@ li {
   list-style-type: none;
 }
 
+.list-group{
+  margin: 0 0 0 1%;
+  padding: 2%
+}
+.api-ul{
+  display: flex;
+  justify-content: space-around;
+}
+.div-card{
+  width: 18rem;
+  padding: 1%;
+  text-align: center;
+}
+.div-day{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
 
