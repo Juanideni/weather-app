@@ -1,24 +1,71 @@
+
+.formulary{
+  display: flex;
+  justify-content: center;
+  margin: 5% 0 0 0;
+}
+.link{
+  font-size: 25px;
+  
+}
 li {
   list-style-type: none;
 }
-
-.list-group{
-  margin: 0 0 0 1%;
-  padding: 2%
-}
 .api-ul{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin: 0 0 0 0;
 }
+
 .div-card{
-  width: 18rem;
-  padding: 1%;
+  width: 12rem;
+  height: 15rem;
   text-align: center;
+
+}
+
+.text-days{
+  position: relative;
+  top: 15%;
+  margin: 10% 0 10% 0
 }
 .div-day{
   display: flex;
   justify-content: space-evenly;
+  padding: 2%;
+}
+.main-day{
+  padding: 0.5% 1% 0.5% 1%;
 }
 
+.div-text{
+  display: flex;
+ 
+}
+.min{
+  color:#1f06ff
+}
+.max{
+  color:#ff0606
+}
 
+.title{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2%;
+}
+.text{
+  position: absolute;
+  bottom: 5%;
+}
+.next-days{
+  text-align: center;
+}
+.spinner{
+ text-align: center;
+}
 
+.foot, .nav{
+  background-color: #b3b3b3;
+  font-size: large;
+}

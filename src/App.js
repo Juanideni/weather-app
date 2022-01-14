@@ -4,6 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Inputs from './Components/Inputs';
 import City from "./Components/City";
 import WeatherInfo from "./Components/WeatherInfo";
+import Bar from "./Components/Bar";
+import TodayWeather from "./Components/TodayWeather";
+
 
 function App(props) {
 
@@ -20,9 +23,13 @@ function App(props) {
 
   return (
     <>
+    
+    <Bar/>
     <Inputs sendName = {sendName}/>
     <City name = {city} sendId={sendId}/>
+    <TodayWeather id = {idCity} name={city}/>
     <WeatherInfo id = {idCity} name={city}/>
+
 
     </>
   );
