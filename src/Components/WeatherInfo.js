@@ -1,4 +1,4 @@
-import { Card, Spinner, Modal, Button } from "react-bootstrap";
+import { Card} from "react-bootstrap";
 import { useState, useEffect } from "react";
 
 var dayjs = require("dayjs");
@@ -6,9 +6,6 @@ var dayjs = require("dayjs");
 function WeatherInfo(props) {
   const [weatherInfo, setWeatherInfo] = useState([]);
   
-
-  
-
   useEffect(() => {
     if (props.id !== 0) {
       const fetchData = async () => {
@@ -29,11 +26,10 @@ function WeatherInfo(props) {
 
   const imgUrlBase = "https://www.metaweather.com/static/";
   
-  
   return (
     <>
      
-      <ul className=" row row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-6 g-6  ">
+      <ul className=" row row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-6 g-4 ">
         {weatherInfo.map((days) => (
           <>
             <li key="days.id">
