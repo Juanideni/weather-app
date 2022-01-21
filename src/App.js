@@ -23,14 +23,14 @@ function App(props) {
 
   return (
     <>
-    
-    <Bar/>
-    <Inputs sendName = {sendName}/>
-    <City name = {city} sendId={sendId}/>
-    <TodayWeather id = {idCity} name={city}/>
-    <WeatherInfo id = {idCity}/>
-
-
+      <Bar />
+      <Inputs
+        sendName={sendName}
+        
+      />
+      <City name={city} sendId={sendId} />
+      <TodayWeather id={idCity} name={city}  />
+      <WeatherInfo id={idCity} />
     </>
   );
 }

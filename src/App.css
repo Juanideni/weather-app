@@ -73,3 +73,22 @@ li {
   display: flex;
   justify-content: center;
 }
+.parentDisable{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #b3b3b3;
+  opacity: 0.9;
+  z-index: 998;
+  height: 100%;
+  width: 100%;
+}
+
+.overlay-box {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  color: rgb(255, 252, 252); background: #b3b3b3; opacity: .8;
+  z-index: 1000;
+}

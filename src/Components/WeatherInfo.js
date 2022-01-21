@@ -1,10 +1,12 @@
-import { Card} from "react-bootstrap";
+import { Card, Spinner} from "react-bootstrap";
 import { useState, useEffect } from "react";
 
 var dayjs = require("dayjs");
 
 function WeatherInfo(props) {
   const [weatherInfo, setWeatherInfo] = useState([]);
+ 
+
   
   useEffect(() => {
     if (props.id !== 0) {
@@ -29,7 +31,9 @@ function WeatherInfo(props) {
   return (
     <>
      
-      <ul className=" row row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-6 g-4 ">
+      {props.loading ? <Spinner animation="border"/> 
+      :
+      <ul className=" row row-cols-sm-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-6 g-4 ">
         {weatherInfo.map((days) => (
           <>
             <li key="days.id">
@@ -74,6 +78,8 @@ function WeatherInfo(props) {
           </>
         ))}
       </ul>
+      }
+      
     </>
   );
 }
