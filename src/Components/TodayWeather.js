@@ -40,7 +40,7 @@ function TodayWeather(props) {
   return firstDay !== undefined ? (
   
     <>
-    {props.loading ? <Spinner animation="border"/> : <div className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4  div-day">
+    {props.loading ? <Spinner animation="border"/> : <div className="row row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 g-5 div-day">
       <Card
         style={{ width: "23.5rem", height: "18rem" }}
         className="main-day"

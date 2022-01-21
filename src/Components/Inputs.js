@@ -11,7 +11,7 @@ function Inputs(props) {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 10000);
+    }, 7000);
   };
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -38,8 +38,11 @@ function Inputs(props) {
 
   return (
     <>
-      <Form onSubmit={handleSubmit(onSubmit)} className="formulary">
-        <Row className="align-items-center">
+      <Form
+        onSubmit={handleSubmit(onSubmit)}
+        className="formulary "
+      >
+        <Row className="justify-content-center">
           <Col xs="auto">
             <Form.Label htmlFor="inlineFormInput" visuallyHidden>
               Name
